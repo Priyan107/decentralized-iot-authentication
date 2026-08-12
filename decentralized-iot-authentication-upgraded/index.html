@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Decentralized IoT Authentication</title><link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header><div><h1>IoT Decentralized Authentication</h1><p>PUF + Blockchain Security Simulation</p></div><div class="status">● SYSTEM ONLINE</div></header>
+<section class="hero"><small>SECURITY PROTOTYPE</small><h2>Secure Authentication for IoT Devices</h2>
+<p>Challenge-response verification with a software-simulated PUF fingerprint and a blockchain-style audit ledger.</p></section>
+<div class="stats">
+<div><b id="total">0</b><span>Registered Devices</span></div><div><b id="success">0</b><span>Successful Authentications</span></div>
+<div><b id="blocked">0</b><span>Blocked Attempts</span></div><div><b id="risk">0</b><span>Risk Score</span></div></div>
+<main>
+<section class="card"><h3>Register Device</h3><input id="regId" placeholder="e.g. IOT-004"><button onclick="registerDevice()">Register Device</button><p id="regMsg"></p></section>
+<section class="card"><h3>Challenge-Response Authentication</h3>
+<input id="authId" placeholder="Registered Device ID"><input id="challenge" value="TEMP-2026-001" placeholder="Challenge">
+<input id="response" placeholder="Generate or enter response">
+<div class="buttons"><button class="secondary" onclick="generateResponse()">Generate PUF Response</button><button onclick="authenticate()">Authenticate</button></div><p id="authMsg"></p></section>
+<section class="card attack"><h3>Attack Simulation</h3><p>Test whether a spoofed device identity is blocked.</p><button class="danger" onclick="attack()">Simulate Spoofing Attack</button><p id="attackMsg"></p></section>
+<section class="card"><h3>Risk Evaluation</h3><div class="riskline"><b id="riskLabel">LOW</b><span id="riskDesc">No suspicious activity detected.</span></div><div class="bar"><i id="bar"></i></div><small>Failed attempts: <b id="fails">0</b> · Response mismatches: <b id="mismatches">0</b></small></section>
+<section class="card wide"><div class="row"><div><h3>Blockchain-Style Audit Ledger</h3><p>Each block is linked to the previous block hash.</p></div><button class="secondary compact" onclick="verifyChain()">Verify Chain</button></div><div id="ledger">No blocks recorded yet.</div></section>
+<section class="card wide"><h3>System Logs</h3><div id="logs"></div></section>
+<section class="card wide"><h3>About the Prototype</h3><p>This project demonstrates the research authentication workflow. The PUF is simulated in software and the ledger is blockchain-inspired; no physical PUF hardware or live blockchain network is used.</p></section>
+</main>
+<footer>Decentralized Authentication Using PUF and Blockchain for IoT Security</footer>
+<script src="script.js"></script>
+</body></html>
